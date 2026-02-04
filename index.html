@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>キャリアアップ助成金：受給フローと重要注意点</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f0f4f8; color: #1e293b; }
+        
+        /* Flow Line */
+        .flow-container { position: relative; }
+        .flow-line { position: absolute; left: 28px; top: 0; bottom: 0; width: 4px; background: #cbd5e1; z-index: 0; }
+        
+        /* Step Number */
+        .step-num { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 900; z-index: 10; position: relative; flex-shrink: 0; }
+        
+        /* Attention Badge */
+        .attention-card { border-left: 4px solid #ef4444; background: #fff1f2; }
+        
+        /* Chart container */
+        .chart-container { position: relative; width: 100%; height: 200px; }
+    </style>
+</head>
+<body class="pb-20">
+
+    <!-- Header -->
+    <header class="bg-slate-900 text-white py-12 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl md:text-5xl font-black mb-4 tracking-tighter">助成金受給までの<br class="md:hidden">完全ロードマップ</h1>
+            <p class="text-amber-400 font-bold">知らないと損をする「受給不可」を防ぐ重要ポイント解説</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 mt-12">
+
+        <!-- Flow Section -->
+        <section class="flow-container space-y-12">
+            <div class="flow-line hidden md:block"></div>
+
+            <!-- STEP 1 -->
+            <div class="flex flex-col md:flex-row gap-6 relative">
+                <div class="step-num bg-slate-800 text-white text-xl">01</div>
+                <div class="flex-1 space-y-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            キャリアアップ計画書の提出
+                            <span class="ml-auto text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded">転換前</span>
+                        </h3>
+                        <p class="text-sm text-slate-600">労働局へ「今後、正社員化を進めます」という宣言を最初に行います。</p>
+                    </div>
+                    <!-- Attention Point -->
+                    <div class="attention-card p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center text-red-600 font-bold text-sm mb-1">
+                            <span class="mr-2">⚠️</span>ここが注意！
+                        </div>
+                        <p class="text-sm font-bold text-slate-800">「計画提出前」に転換すると1円ももらえません</p>
+                        <p class="text-xs text-slate-600 mt-1">必ず計画書の受理印をもらってから、実際の正社員転換（雇用契約締結）を行ってください。日付の前後関係は厳格にチェックされます。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="flex flex-col md:flex-row gap-6 relative">
+                <div class="step-num bg-slate-800 text-white text-xl">02</div>
+                <div class="flex-1 space-y-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            就業規則の改定・正社員転換
+                            <span class="ml-auto text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded">転換当日</span>
+                        </h3>
+                        <p class="text-sm text-slate-600">正社員転換の規定を就業規則に明記し、対象者と新しい雇用契約を結びます。</p>
+                    </div>
+                    <div class="attention-card p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center text-red-600 font-bold text-sm mb-1">
+                            <span class="mr-2">⚠️</span>ここが注意！
+                        </div>
+                        <p class="text-sm font-bold text-slate-800">就業規則に「正社員転換規定」がないと即アウト</p>
+                        <p class="text-xs text-slate-600 mt-1">「有期社員から正社員への転換ルール」が就業規則（または労働条件通知書）に具体的に記載されている必要があります。適当な運用は認められません。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="flex flex-col md:flex-row gap-6 relative">
+                <div class="step-num bg-slate-800 text-white text-xl">03</div>
+                <div class="flex-1 space-y-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            6ヶ月間の雇用継続と3%昇給
+                            <span class="ml-auto text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded">転換後6ヶ月</span>
+                        </h3>
+                        <p class="text-sm text-slate-600">転換後の新しい給与条件で6ヶ月間勤務。欠勤等がないか確認します。</p>
+                    </div>
+                    <div class="attention-card p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center text-red-600 font-bold text-sm mb-1">
+                            <span class="mr-2">⚠️</span>ここが注意！
+                        </div>
+                        <p class="text-sm font-bold text-slate-800">「手当」を除いた基本給ベースで3%以上のUPが必要</p>
+                        <p class="text-xs text-slate-600 mt-1">残業代や実費弁償的な手当（交通費など）を除いた「賃金」が、転換前6ヶ月の平均と比べて3%以上増えている必要があります。1円でも足りないと不支給です。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="flex flex-col md:flex-row gap-6 relative">
+                <div class="step-num bg-green-500 text-white text-xl">04</div>
+                <div class="flex-1 space-y-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            支給申請書の作成・提出
+                            <span class="ml-auto text-xs bg-slate-100 text-slate-500 px-2 py-1 rounded">給与支払後</span>
+                        </h3>
+                        <p class="text-sm text-slate-600">6ヶ月分の給与を支払った翌日から2ヶ月以内に申請します。</p>
+                    </div>
+                    <div class="attention-card p-4 rounded-xl shadow-sm">
+                        <div class="flex items-center text-red-600 font-bold text-sm mb-1">
+                            <span class="mr-2">⚠️</span>ここが注意！
+                        </div>
+                        <p class="text-sm font-bold text-slate-800">タイムカードと賃金台帳の「1分のズレ」も許されない</p>
+                        <p class="text-xs text-slate-600 mt-1">出勤簿（タイムカード）と給与計算の結果が完全に一致している必要があります。未払残業がある場合は、申請前に修正・支払が必要です。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Checker -->
+        <section class="mt-20 bg-amber-50 rounded-3xl p-8 border-2 border-amber-200">
+            <h2 class="text-2xl font-black mb-6 text-center">その他の「門前払い」ポイント</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-amber-100">
+                    <h4 class="font-bold text-slate-800 flex items-center mb-2">
+                        <span class="text-amber-500 mr-2">●</span>解雇の有無
+                    </h4>
+                    <p class="text-xs text-slate-500">転換日の前後6ヶ月間に、会社都合の解雇（リストラ等）を行っていると受給できません。</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-amber-100">
+                    <h4 class="font-bold text-slate-800 flex items-center mb-2">
+                        <span class="text-amber-500 mr-2">●</span>社会保険の未加入
+                    </h4>
+                    <p class="text-xs text-slate-500">正社員転換後は、週の労働時間に関わらず社会保険（健康保険・厚生年金）への加入が必須です。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Calculator (Re-inserted for visual summary) -->
+        <section class="mt-20 text-center">
+            <h2 class="text-2xl font-black mb-10">受給シミュレーション</h2>
+            <div class="bg-white p-8 rounded-3xl shadow-xl">
+                <input type="range" id="simRange" min="1" max="10" value="1" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-amber-500 mb-6">
+                <div class="flex items-center justify-center space-x-2">
+                    <span class="text-slate-400 font-bold">正社員にする人数：</span>
+                    <span id="simCount" class="text-4xl font-black text-amber-500">1</span>
+                    <span class="text-slate-400 font-bold">名</span>
+                </div>
+                <div class="mt-6">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">受給見込額</p>
+                    <div class="text-5xl font-black text-slate-900 mt-2">
+                        ¥<span id="simTotal">570,000</span>
+                    </div>
+                </div>
+                <button class="mt-10 w-full md:w-auto px-12 py-4 bg-slate-900 text-white font-bold rounded-2xl hover:bg-slate-800 transition-all">
+                    詳細を専門家に相談する（無料）
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const simRange = document.getElementById('simRange');
+        const simCount = document.getElementById('simCount');
+        const simTotal = document.getElementById('simTotal');
+
+        simRange.addEventListener('input', () => {
+            const count = parseInt(simRange.value);
+            simCount.textContent = count;
+            const total = count * 570000;
+            simTotal.textContent = total.toLocaleString();
+        });
+    </script>
+</body>
+</html>
